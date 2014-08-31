@@ -9,5 +9,6 @@ end
 gem 'activesupport'
 gem 'autoprefixer-rails'
 gem 'rerun'
+gem 'sass'
 gem 'sinatra'
 gem 'thin'

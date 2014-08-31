@@ -1,0 +1,43 @@
+.colorwheel {
+    position: relative;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.colorwheel:before {
+    box-sizing: border-box;
+
+    transform: scale(1);
+    filter: blur(20px) saturate(1.1) brightness(1.1);
+
+    content: "";
+    display: block;
+    width: 200%;
+    height: 200%;
+
+    position: absolute;
+    top: -50%;
+    left: -50%;
+
+    padding-top: 100%;
+
+    background-image: linear-gradient(330deg, transparent 50%, #FF8100 50%),
+                      linear-gradient(300deg, transparent 50%, #FF5800 50%),
+                      linear-gradient(270deg, transparent 50%, #FF3BA7 50%),
+                      linear-gradient(240deg, transparent 50%, #CC42A2 50%),
+                      linear-gradient(210deg, transparent 50%, #9f49ac 50%),
+                      linear-gradient(180deg, transparent 50%, #476EAF 50%),
+                      linear-gradient(150deg, transparent 50%, #179067 50%),
+                      linear-gradient(120deg, transparent 50%, #50B517 50%),
+                      linear-gradient(90deg,  transparent 50%, #9ED110 50%),
+                      linear-gradient(60deg,  transparent 50%, #EDE604 50%),
+                      linear-gradient(30deg,  transparent 50%, #FFCC00 50%),
+                      linear-gradient(0deg,   transparent 50%, #FEAC00 50%);
+
+    background-clip: content-box, content-box, content-box, content-box, content-box, content-box,
+                    padding-box, padding-box, padding-box, padding-box, padding-box, padding-box;
+}

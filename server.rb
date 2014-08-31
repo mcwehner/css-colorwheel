@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'bundler/setup'
+require 'sass'
 require 'sinatra'
 
 require 'autoprefixer-rails'
@@ -30,6 +31,5 @@ get '/stylesheets/:name' do
   # SECURE: Potentially dangerous filesystem access?
   filename = "#{settings.assets_path}/stylesheets/#{File.basename(params[:name])}"
 
-  content_type :css
-  AutoprefixerRails.process(File.read(filename)).css
+  scss AutoprefixerRails.process(File.read(filename)).css
 end
